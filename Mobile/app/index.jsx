@@ -1,4 +1,3 @@
-// screens/WelcomeScreen.js
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
@@ -8,7 +7,7 @@ export default function WelcomeScreen({ navigation }) {
       <Text style={styles.title}>Bem-vindo!</Text>
       <Text style={styles.subtitle}>Escolha uma opção para continuar:</Text>
       <Button title="Fazer Login" onPress={() => navigation.navigate('Login')} />
-      <Button title="Cadastrar-se" onPress={() => navigation.navigate('Register')} />
+      <Button title="Cadastrar-se" onPress={() => navigation.navigate('Cadastro')} />
     </View>
   );
 }
