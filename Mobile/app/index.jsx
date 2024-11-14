@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '30%',
+    fontFamily: 'Comic Sans MS	',
     padding: 15,
     marginBottom: 20,
     borderRadius: 5,
@@ -99,10 +100,12 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
+    fontFamily: 'Comic Sans MS	',
   },
   registerText: {
     color: '#fff',
     marginTop: 20,
+    fontFamily: 'Comic Sans MS	',
   },
   link: {
     color: '#051923',

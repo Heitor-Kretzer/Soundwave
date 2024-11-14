@@ -18,7 +18,7 @@ export default function RegisterScreen({ navigation }) {
         style={styles.background}
       />
        <Image source={logo} style={styles.logo} />
-      <Text style={styles.title}>Cadastre-se no Soundwave</Text>
+      <Text style={styles.title}>CADASTRE-SE NO SOUNDWAVE</Text>
 
       <TextInput
         style={styles.input}
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
   input: {
     width: '30%',
     padding: 15,
+    fontFamily: 'Comic Sans MS	',
     marginBottom: 20,
     borderRadius: 5,
     backgroundColor: '#fff',
@@ -113,11 +114,13 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
+    fontFamily: 'Comic Sans MS	',
     fontWeight: 'bold',
   },
   loginText: {
     color: '#fff',
     marginTop: 20,
+    fontFamily: 'Comic Sans MS	',
   },
   link: {
     color: '#051923',
