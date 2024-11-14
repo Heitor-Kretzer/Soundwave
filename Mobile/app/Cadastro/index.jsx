@@ -1,27 +1,32 @@
-// LoginScreen.js
+// RegisterScreen.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image,} from 'react-native';
-import logo from '../assets/images/soundwave.png';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import logo from '../../assets/images/soundwave.png';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from 'expo-router';
 
-export default function LoginScreen({ navigation }) {
+export default function RegisterScreen({ navigation }) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  // Função para login (pode adicionar lógica de autenticação aqui)
-  const handleLogin = () => {
-    console.log('Login attempted with:', email, password);
-  };
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   return (
     <View style={styles.container}>
-      <LinearGradient
+       <LinearGradient
         colors={['#003554', 'transparent']}
         style={styles.background}
       />
-      <Image source={logo} style={styles.logo} />
-      <Text style={styles.title}>Seja bem-vindo ao Soundwave, Faça Login:</Text>
+       <Image source={logo} style={styles.logo} />
+      <Text style={styles.title}>Cadastre-se no Soundwave</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Nome"
+        placeholderTextColor="#00A6FB"
+        value={name}
+        onChangeText={setName}
+      />
 
       <TextInput
         style={styles.input}
@@ -40,17 +45,26 @@ export default function LoginScreen({ navigation }) {
         onChangeText={setPassword}
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Entrar</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Confirme a Senha"
+        placeholderTextColor="#00A6FB"
+        secureTextEntry
+        value={confirmPassword}
+        onChangeText={setConfirmPassword}
+      />
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Registrar</Text>
       </TouchableOpacity>
 
-      {/* Link para a página de cadastro */}
       <Text style={styles.registerText}>
-        Não possui cadastro?{' '}
-        <Link href="./Cadastro">
-          <Text style={styles.link}>Cadastre-se</Text>
+        Já possui cadastro?{' '}
+        <Link href="">
+          <Text style={styles.link}>Fazer Login</Text>
         </Link>
       </Text>
+      
     </View>
   );
 }
@@ -58,7 +72,7 @@ export default function LoginScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00A6FB', 
+    backgroundColor: '#00A6FB',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -66,12 +80,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     right: 0,
-    top: 0,
+    top: -100,
     height: 300,
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: 150, 
+    height: 150, 
+    resizeMode: 'contain',
     marginBottom: 40,
   },
   title: {
@@ -99,7 +114,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-  registerText: {
+  loginText: {
     color: '#fff',
     marginTop: 20,
   },
