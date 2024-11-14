@@ -9,7 +9,7 @@ export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Função para login (pode adicionar lógica de autenticação aqui)
+
   const handleLogin = () => {
     console.log('Login attempted with:', email, password);
   };
@@ -20,8 +20,9 @@ export default function LoginScreen({ navigation }) {
         colors={['#003554', 'transparent']}
         style={styles.background}
       />
+      <Text style={styles.title}>SOUNDWAVE</Text>
       <Image source={logo} style={styles.logo} />
-      <Text style={styles.title}>Seja bem-vindo ao Soundwave, Faça Login:</Text>
+      <Text style={styles.title}>LOGIN:</Text>
 
       <TextInput
         style={styles.input}
@@ -44,7 +45,6 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
 
-      {/* Link para a página de cadastro */}
       <Text style={styles.registerText}>
         Não possui cadastro?{' '}
         <Link href="./Cadastro">
@@ -75,20 +75,21 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   title: {
-    fontSize: 24,
+    fontSize: 25,
+    fontFamily: 'Comic Sans MS	',
     fontWeight: 'bold',
     color: '#fff',
     marginBottom: 40,
   },
   input: {
-    width: '80%',
+    width: '30%',
     padding: 15,
     marginBottom: 20,
     borderRadius: 5,
     backgroundColor: '#fff',
   },
   button: {
-    width: '80%',
+    width: '30%',
     padding: 15,
     borderRadius: 5,
     backgroundColor: '#051923',
