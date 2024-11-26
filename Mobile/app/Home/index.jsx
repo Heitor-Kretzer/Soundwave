@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { FontAwesome } from '@expo/vector-icons'; // Biblioteca para ícones
+import { FontAwesome } from '@expo/vector-icons';
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -19,21 +19,21 @@ const HomeScreen = ({ navigation }) => {
 
         <Text style={styles.sectionTitle}>Artistas</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollContainer}>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Artists')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/xxtenta.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>Xxxtentacion</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Artists')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/trevis.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>Travis Scott</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Artists')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/lilp.jpg')}
               style={styles.cardImage}
@@ -44,21 +44,21 @@ const HomeScreen = ({ navigation }) => {
 
         <Text style={styles.sectionTitle}>Álbuns Recentes</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollContainer}>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Albums')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/ALBUMXX.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>XXX</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Albums')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/travisco.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>AstroWorld</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Albums')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/almbuml.jpg')}
               style={styles.cardImage}
@@ -69,21 +69,21 @@ const HomeScreen = ({ navigation }) => {
 
         <Text style={styles.sectionTitle}>Músicas Populares</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollContainer}>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Songs')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/look.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>Look At Me</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Songs')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/musicat.jpg')}
               style={styles.cardImage}
             />
             <Text style={styles.cardText}>Highest in the Room</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Songs')}>
+          <TouchableOpacity style={styles.card}>
             <Image
               source={require('../../assets/images/gucci.jpg')}
               style={styles.cardImage}
@@ -93,10 +93,9 @@ const HomeScreen = ({ navigation }) => {
         </ScrollView>
       </ScrollView>
 
-      {/* Player Estático - com navegação para a tela de Player */}
       <TouchableOpacity style={styles.playerContainer} onPress={() => navigation.navigate('Player')}>
         <Image
-          source={require('../../assets/images/look.jpg')} // Imagem da música em reprodução
+          source={require('../../assets/images/look.jpg')}
           style={styles.playerImage}
         />
         <View style={styles.playerDetails}>

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const PlayerScreen = ({ navigation }) => {  // O navigation será passado como uma prop automaticamente
+const PlayerScreen = ({ navigation }) => {
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Função de controle de reprodução
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
@@ -13,7 +12,7 @@ const PlayerScreen = ({ navigation }) => {  // O navigation será passado como u
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/images/look.jpg')} // Imagem da música em reprodução
+        source={require('../../assets/images/look.jpg')}
         style={styles.albumArt}
       />
       <View style={styles.detailsContainer}>
@@ -39,10 +38,9 @@ const PlayerScreen = ({ navigation }) => {  // O navigation será passado como u
         </TouchableOpacity>
       </View>
 
-      {/* Botão para voltar à tela anterior */}
       <TouchableOpacity
         style={styles.backButton}
-        onPress={() => navigation.goBack()}  // Aqui o navigation está correto
+        onPress={() => navigation.goBack()}
       >
         <FontAwesome name="arrow-left" size={24} color="#fff" />
       </TouchableOpacity>
